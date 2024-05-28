@@ -1,5 +1,7 @@
 # Add banner
 # Add title
+![banner](readme assets/banner.png)
+
 
 ![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Siddharth-Mohanty-308/Credit-card-approval-project)
@@ -25,11 +27,11 @@ Badge [source](https://shields.io/)
 
 [dataset_link](https://www.kaggle.com/datasets/keitazoumana/aercreditcard)
 
-## Methods
+## Process
 
-- Data Cleaning
-- Exploratory Data Analysis
-- Local Model Building and Training
+- Data Cleaning and Transfomation
+- Model training and evaluation
+- Building UI
 - Model Deployment using Flask
 
 ## Tech Stack
