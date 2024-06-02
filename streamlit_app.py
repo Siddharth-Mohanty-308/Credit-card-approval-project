@@ -23,20 +23,18 @@ with st.form('Details Form'):
 
     submitted=st.form_submit_button('Submit')
 
-
+# Ensure correct data types and print debug information
 if submitted:
-    try:
-        # Ensure correct data types and print debug information
-        st.write("Reports:", reports, type(reports))
-        st.write("Age:", age, type(age))
-        st.write("Income:", income, type(income))
-        st.write("Expenses:", expenses, type(expenses))
-        st.write("House Owner:", house_owner, type(house_owner))
-        st.write("Self Employed:", self_employed, type(self_employed))
-        st.write("Dependents:", dependents, type(dependents))
-        st.write("Months Address:", months_address, type(months_address))
-        st.write("Major Cards:", major_cards, type(major_cards))
-        st.write("Credit Accounts:", credit_accounts, type(credit_accounts))
+    st.write("Reports:", reports, type(reports))
+    st.write("Age:", age, type(age))
+    st.write("Income:", income, type(income))
+    st.write("Expenses:", expenses, type(expenses))
+    st.write("House Owner:", house_owner, type(house_owner))
+    st.write("Self Employed:", self_employed, type(self_employed))
+    st.write("Dependents:", dependents, type(dependents))
+    st.write("Months Address:", months_address, type(months_address))
+    st.write("Major Cards:", major_cards, type(major_cards))
+    st.write("Credit Accounts:", credit_accounts, type(credit_accounts))
 
 if submitted:
     feature_array=np.array
