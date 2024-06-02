@@ -37,9 +37,9 @@ if submitted:
             
             # Determine the result message
             if prediction == 1:
-                result = "Credit Card Approved"
+                result = "Result: Credit Card Approved"
             else:
-                result = "Credit Card Not Approved"
+                result = "Result: Credit Card Not Approved"
             
             st.subheader(result)
         except Exception as e:
