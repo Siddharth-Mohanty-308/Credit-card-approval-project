@@ -1,5 +1,3 @@
-#'months_in_current_address',
-# 'active_credit_accounts'
 
 import streamlit as st
 import numpy as np
@@ -46,8 +44,8 @@ if submitted:
         ]
     )
 
-    prediction=model.predict(feature_array)[0]
-
+    prediction=model.predict(feature_array)
+    
     if prediction==1:
         result='Credit Card Approved'
     else:
