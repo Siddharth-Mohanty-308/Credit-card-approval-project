@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the pre-trained model
 try:
-    model = joblib.load('decision_tree.joblib')
+    model = joblib.load('decision_tree_model.joblib')
 except FileNotFoundError:
     st.error('Model file not found. Please ensure the model is available.')
 
