@@ -24,17 +24,17 @@ with st.form('Details Form'):
     submitted=st.form_submit_button('Submit')
 
 # Ensure correct data types and print debug information
-if submitted:
-    st.write("Reports:", reports, type(reports))
-    st.write("Age:", age, type(age))
-    st.write("Income:", income, type(income))
-    st.write("Expenses:", expenditure, type(expenditure))
-    st.write("House Owner:", house_owner, type(house_owner))
-    st.write("Self Employed:", self_emp, type(self_emp))
-    st.write("Dependents:", dependents, type(dependents))
-    st.write("Months Address:", curr_add, type(curr_add))
-    st.write("Major Cards:", major_cards, type(major_cards))
-    st.write("Credit Accounts:", active_accounts, type(active_accounts))
+# if submitted:
+#     st.write("Reports:", reports, type(reports))
+#     st.write("Age:", age, type(age))
+#     st.write("Income:", income, type(income))
+#     st.write("Expenses:", expenditure, type(expenditure))
+#     st.write("House Owner:", house_owner, type(house_owner))
+#     st.write("Self Employed:", self_emp, type(self_emp))
+#     st.write("Dependents:", dependents, type(dependents))
+#     st.write("Months Address:", curr_add, type(curr_add))
+#     st.write("Major Cards:", major_cards, type(major_cards))
+#     st.write("Credit Accounts:", active_accounts, type(active_accounts))
 
 if submitted:
     feature_array=np.array
@@ -54,4 +54,8 @@ if submitted:
         result='Credit Card Not Approved'
 
     st.subheader(result)
+    st.error(f"An error occurred during prediction: {e}")
+    st.write("Features:", feature_array)
+    st.write("Features shape:", feature_array.shape)
+    st.write("Features type:", type(feature_array))
 
