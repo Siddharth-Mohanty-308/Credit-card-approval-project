@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Load the pre-trained model
+# Load model
 try:
     model = joblib.load('decision_tree_model.joblib')
 except FileNotFoundError:
@@ -11,7 +11,6 @@ except FileNotFoundError:
 st.title('Credit Card Approval Prediction')
 st.caption('Made by Siddharth Mohanty')
 
-# Create a form
 with st.form('credit_form'):
     st.header('Enter your details:')
     reports = st.number_input('Number of Reports', min_value=0, step=1, format='%d')
@@ -30,19 +29,20 @@ with st.form('credit_form'):
 if submitted:
     if 'model' in locals():
         try:
-            # Prepare data for prediction
+            # Prepare data 
             features = np.array([[reports, age, income, expenses, house_owner, self_employed, dependents, months_address, major_cards, credit_accounts]])
             
             # Make prediction
             prediction = model.predict(features)[0]
             
-            # Determine the result message
             if prediction == 1:
-                result = "Result: Credit Card Approved"
+                result = "Credit Card Approved"
             else:
-                result = "Result: Credit Card Not Approved"
+                result = "Credit Card Not Approved"
             
-            st.subheader(result)
+            with st.modal('Result:'):
+                st.subheader(result)
+
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
     else:
