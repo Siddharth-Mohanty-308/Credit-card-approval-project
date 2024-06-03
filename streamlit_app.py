@@ -9,7 +9,7 @@ except FileNotFoundError:
     st.error('Model file not found. Please ensure the model is available.')
 
 st.title('Credit Card Approval Prediction')
-st.subheader('### Made by Siddharth Mohanty')
+st.markdown('### Made by Siddharth Mohanty')
 
 # Create a form
 with st.form('credit_form'):
