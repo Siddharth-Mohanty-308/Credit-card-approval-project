@@ -13,8 +13,8 @@ st.caption('Made by Siddharth Mohanty')
 
 with st.form('credit_form'):
     st.header('Enter your details:')
-    income = st.number_input('Yearly Income', min_value=0, step=1000, format='%d')
-    expenses = st.number_input('Monthly Card Expenses', min_value=0, step=100, format='%d')
+    income = st.number_input('Yearly Income in $', min_value=0, step=1000, format='%d')
+    expenses = st.number_input('Monthly Card Expenses in $', min_value=0, step=100, format='%d')
     age = st.slider('Age', min_value=18, max_value=95, step=1)
     reports = st.number_input('Number of Reports', min_value=0, step=1, format='%d')
     house_owner = st.selectbox('Owner of House', options=[(1, 'Yes'), (0, 'No')], format_func=lambda x: x[1])[0]
