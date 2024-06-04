@@ -40,8 +40,7 @@ if submitted:
             else:
                 result = "Credit Card Not Approved"
             
-            with st.modal('Result:'):
-                st.subheader(result)
+            st.subheader(result)
 
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
