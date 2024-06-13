@@ -36,9 +36,11 @@ if submitted:
             prediction = model.predict(features)[0]
             
             if prediction == 1:
-                st.success(":heavy_check_mark: Congratulations credit card is Approved")
+                result=":heavy_check_mark: Congratulations credit card is Approved"
             else:
-                st.error(":heavy_multiplication_x: Sorry your credit card is not Approved")
+                result=":heavy_multiplication_x: Sorry your credit card is not Approved"
+
+        st.subheader(result)
 
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
