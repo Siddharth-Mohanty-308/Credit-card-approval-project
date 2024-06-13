@@ -40,7 +40,7 @@ if submitted:
             else:
                 result=":heavy_multiplication_x: Sorry your credit card is not Approved"
 
-        st.subheader(result)
+            st.subheader(result)
 
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
