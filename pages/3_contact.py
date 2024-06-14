@@ -1,11 +1,8 @@
 import streamlit as st
 from PIL import Image
 
-col1, col2 = st.columns([2,3])
-image=Image.open('my_image.png')
-
 with col1:
-  st.image(image, use_column_width=True)
+  st.image("https://github.com/Siddharth-Mohanty-308/Credit-card-approval-project/blob/main/pages/my_image.png", use_column_width=True)
   st.markdown("[My LinkedIn id](https://www.linkedin.com/in/siddharth6791/)")
   st.markdown("email: siddharth6791@gmail.com")
 
