@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 
 with col1:
   st.image("https://github.com/Siddharth-Mohanty-308/Credit-card-approval-project/blob/main/pages/my_image.png", use_column_width=True)
