@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-import scikit-learn 
+from sklearn import tree
 
 model = joblib.load('decision_tree_model.joblib')
 st.markdown("### Model metrics")
