@@ -1,7 +1,10 @@
 import streamlit as st
 
+image_url = 'https://raw.githubusercontent.com/Siddharth-Mohanty-308/Credit-card-approval-project/main/pages/my_image.png'
+col1, col2 = st.columns([2, 3])
+
 with col1:
-  st.image("https://github.com/Siddharth-Mohanty-308/Credit-card-approval-project/blob/main/pages/my_image.png", use_column_width=True)
+  st.image(image_url, use_column_width=True)
   st.markdown("[My LinkedIn id](https://www.linkedin.com/in/siddharth6791/)")
   st.markdown("email: siddharth6791@gmail.com")
 
