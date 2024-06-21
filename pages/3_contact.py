@@ -4,7 +4,7 @@ image_url = 'https://raw.githubusercontent.com/Siddharth-Mohanty-308/Credit-card
 col1, col2 = st.columns([1, 3])
 
 with col1:
-  st.image(image_url, use_column_width=False)
+  st.image(image_url, use_column_width=True)
   st.markdown("[My LinkedIn id](https://www.linkedin.com/in/siddharth6791/)")
   st.markdown("email: siddharth6791@gmail.com")
 
