@@ -8,11 +8,12 @@ image_url="https://raw.githubusercontent.com/Siddharth-Mohanty-308/Credit-card-a
 st.markdown("### Model metrics")
 st.caption("Confusion Matrix")
 st.image(image_url)
-st.markdown("### Model diagram")
+st.caption("Fold Accuracies")
+st.image(image_url)
 
+st.markdown("### Model diagram")
 dot_data=tree.export_graphviz(
     model,
     out_file=None
 )
-
 st.graphviz_chart(dot_data)
