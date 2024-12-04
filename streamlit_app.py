@@ -32,9 +32,9 @@ if submitted:
             # Prepare data 
             features = np.array([[reports, age, income, expenses, house_owner, self_employed, dependents, months_address, major_cards, credit_accounts]])
             
-            # Make prediction
+            # Prediction from model
             prediction = model.predict(features)[0]
-            
+            # Added emojis (check_mark, hmultiplication_x)
             if prediction == 1:
                 result=":heavy_check_mark: Congratulations credit card is Approved"
             else:
